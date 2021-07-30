@@ -1,5 +1,4 @@
 ## IMPORTANT
--
 Read this ENTIRE document before beginning work.
 
 ## Collaboration
