@@ -26,6 +26,20 @@ let getEmployees = function(req, res){;
 
 const getEmployeesById = res.json(
   employees.find((employees) => employees.id == req.params.id)
-);
+)
+let sql = "SELECT * FROM employees WHERE emp_no = ?";
+
+    const replacements = [req.params.id];
+
+    sql = mysql.format(sql, replacements);
+
+    pool.query(sql, (err, results) =>{
+        if (err){
+            return res.status(500).send("something went wrong")
+        } else {
+            return res.json(results);
+        }
+    })
+};
 
 module.exports = { getEmployees, getEmployeesById, getEmployeesByFirstName }
