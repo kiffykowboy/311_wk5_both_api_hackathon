@@ -1,4 +1,3 @@
-
 //Controller Function getEmployees
 
 let getEmployees = function(req, res){;
@@ -19,5 +18,10 @@ let getEmployees = function(req, res){;
   
   };
 
+
+
+const getEmployeesById = res.json(
+  employees.find((employees) => employees.id == req.params.id)
+);
 
 module.exports = { getEmployees, getEmployeesById, getEmployeesByFirstName }
