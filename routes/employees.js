@@ -8,4 +8,10 @@ router.get("/employee/:id", employeesController.getEmployee);
 
 router.get("/employee/name/:firstName", employeesController.getEmployeesByName);
 
+
+router.get('/controllers/employees', (req, res) => {
+  
+  res.json(user)
+})
+
 module.exports = router;

@@ -1,3 +1,7 @@
+const getEmployeesByFirstName = () => {
+
+}
+
 //Controller Function getEmployees
 
 let getEmployees = function(req, res){;
