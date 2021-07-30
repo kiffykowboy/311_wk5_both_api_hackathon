@@ -1,1 +1,3 @@
-module.exports = { getEmployees, getEmployeesById, getEmployeesByFirstName }
+module.exports = { 
+  getAllEmployees 
+}
